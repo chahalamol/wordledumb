@@ -1,1 +1,7 @@
 # wordledumb
+
+## What
+
+## Why
+
+## Who
