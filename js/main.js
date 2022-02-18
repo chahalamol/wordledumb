@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let availableSpace = 1;
     let word;
     let guessedWordCount = 0;
+    
 
     // get new words
     function getNewWord() {
         fetch(
-            `https://wordsapiv1.p.rapidapi.com/words/?random=true&lettersMin=4&lettersMax=4&partOfSpeech=verb`,
+            `https://wordsapiv1.p.rapidapi.com/words/?letters=4&frequencymin=6&frequencymax=8&hasDetails=hasDetails%3DtypeOf%2ChasCategories&random=true`,
             {
               method: "GET",
               headers: {
