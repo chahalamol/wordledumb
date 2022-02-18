@@ -24,6 +24,13 @@ html, body {
     flex-direction: column;
 }
 
+.slogan {
+    color: #2e2d2d;
+    font-family: cursive;
+    font-weight: 400;
+    text-align: center;
+}
+
 .title {
     color: #2e2d2d;
     font-size: 2.5rem;
