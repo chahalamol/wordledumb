@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // using keyboard keys on the screen
+    // using keyboard keys
     document.addEventListener('keydown', (e) =>{
         const letter = e.key;
 
@@ -188,6 +188,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (letter === 'Enter') {
             handleSubmitWord();
+            return;
+        }
+
+        if (letter === 'Meta') {
             return;
         }
 

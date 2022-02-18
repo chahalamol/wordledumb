@@ -27,7 +27,7 @@ html, body {
 .slogan {
     color: #2e2d2d;
     font-family: cursive;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -72,6 +72,9 @@ html, body {
 
 #keyboard-container {
     height: 200px;
+    justify-content: center;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .keyboard-row {
@@ -82,12 +85,16 @@ html, body {
     touch-action: manipulation;
 }
 
+#last-key {
+    margin: 0px;
+}
+
 .keyboard-row button {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     border: 0;
     padding: 0;
-    height: 58px;
+    height: 55px;
     cursor: pointer;
     background-color: rgb(67, 67, 67);
     color: rgb(215, 218, 220);
