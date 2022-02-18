@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   window.alert("Congratulations!");
               }
       
-              if (guessedWords.length === 4) {
+              if (guessedWords.length === 5) {
                   window.alert(`You lost! The word is ${word}`);
               }
       
