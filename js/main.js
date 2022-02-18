@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function createSquares() {
         const board = document.getElementById("board");
 
-        for (i = 0; i < 16; i++) {
+        for (i = 0; i < 20; i++) {
             let box = document.createElement("div");
             box.classList.add("square");
             box.setAttribute("id", i + 1);
