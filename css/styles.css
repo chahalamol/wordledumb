@@ -51,6 +51,7 @@ header {
     align-items: center;
     flex-grow: 1;
     overflow: hidden;
+    flex-direction: column;
 }
 
 #board {

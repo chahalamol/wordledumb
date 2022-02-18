@@ -111,8 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
         guessedWords[guessedWords.length - 1] = currentWordArray
         const lastLetterEl = document.getElementById(String(availableSpace - 1))
 
-        lastLetterEl.textContent = ''
+        lastLetterEl.textContent = '';
         availableSpace = availableSpace - 1;
+
+
     }
 
     /* HELPER FUNCTIONS */
@@ -178,11 +180,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    function cannotGoBackspace() {
+        if (availableSpace != 5) {
+            return true;
+        }
+
+        return false;
+    }
+
     // using keyboard keys
     document.addEventListener('keydown', (e) =>{
         const letter = e.key;
 
-        if (letter === 'Backspace') {
+        if (letter === 'Backspace' && cannotGoBackspace()) {
             handleDeleteLetter();
             return;
         }
@@ -192,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        if (letter === 'Meta') {
+        if (letter === 'Meta' || letter === 'Shift' || letter === 'Alt' || letter === 'Control') {
             return;
         }
 
