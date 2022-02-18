@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // get new words
     function getNewWord() {
         fetch(
-            `https://wordsapiv1.p.rapidapi.com/words/?random=true&lettersMin=4&lettersMax=4`,
+            `https://wordsapiv1.p.rapidapi.com/words/?random=true&lettersMin=4&lettersMax=4&partOfSpeech=verb`,
             {
               method: "GET",
               headers: {
