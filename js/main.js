@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentWordArray = getCurrentWordArray();
 
         if (currentWordArray.length != 4) {
-            window.alert("Word should be 4 letter")
+            window.alert("Word should be 4 letter");
+            return;
         }
 
         const currentWord = currentWordArray.join("");
