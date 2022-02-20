@@ -171,7 +171,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (letter === 'del') {
-                handleDeleteLetter();
+                if (!cannotGoBack()) {
+                    handleDeleteLetter();
+                }
                 return;
             }
 
@@ -180,8 +182,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    function cannotGoBackspace() {
-        if (availableSpace != 5) {
+    // prevents the user from backspacing once a word has been submitted
+    function cannotGoBack() {
+        if (availableSpace === 5 && guessedWordCount === 1) {
+            return true;
+        } else if ( availableSpace === 9 && guessedWordCount === 2) {
+            return true;
+        } else if (availableSpace === 13 && guessedWordCount === 3) {
+            return true;
+        } else if (availableSpace === 17 && guessedWordCount === 4) {
+            return true;
+        } else if (availableSpace === 21 && guessedWordCount === 5) {
             return true;
         }
 
@@ -192,8 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', (e) =>{
         const letter = e.key;
 
-        if (letter === 'Backspace' && cannotGoBackspace()) {
-            handleDeleteLetter();
+        if (letter === 'Backspace') {
+            if (!cannotGoBack()) {
+                handleDeleteLetter();
+            }
             return;
         }
 
