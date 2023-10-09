@@ -158,6 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return "rgb(83, 141, 78)"; // green color
         } else if (!isCorrectPosition && !correctLetterGuessed.includes(letter)) {
             return "rgb(181, 159, 59)" // yellow color
+        } else if (!isCorrectPosition && correctLetterGuessed.includes(letter)) {
+            return "rgb(211, 211, 211)"; // grey if the letter has been used up
         }
     }
 
