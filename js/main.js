@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let availableSpace = 1;
     let word;
     let guessedWordCount = 0;
-    
+    let correctLetterGuessed = [];
+
 
     // get new words
     function getNewWord() {
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
               console.error(err);
             });
     }
+
 
     // create new squares
     function createSquares() {
@@ -99,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
               guessedWords.push([])
 
           }).catch(() => {
-              window.alert("Word is not recognized!");
+              window.alert("It's not a real word!");
           });
 
     }
@@ -142,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // gets Tile Colour
     function getTileColor(letter, index) {
-        const isCorrect = word.includes(letter);
+        const isCorrect = word.includes(letter); // check if the word includes aa given letter
 
         if (!isCorrect) {
             return "rgb(211, 211, 211)"; // grey
@@ -152,15 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectPosition = (letter === letterInPosition);
 
         if (isCorrectPosition) {
-            // Checks if the letter only exists once in the word
-            const letterCount = word.split('').filter(l => l === letter).length;
-            if (letterCount === 1) {
-                return "rgb(211, 211, 211)"; // grey
-            }
+            correctLetterGuessed.push(letter);
             return "rgb(83, 141, 78)"; // green color
+        } else if (!isCorrectPosition && !correctLetterGuessed.includes(letter)) {
+            return "rgb(181, 159, 59)" // yellow color
         }
-
-        return "rgb(181, 159, 59)" // yellow color
     }
 
     // pressing the keys on the screen
