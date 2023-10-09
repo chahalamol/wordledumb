@@ -152,6 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectPosition = (letter === letterInPosition);
 
         if (isCorrectPosition) {
+            // Checks if the letter only exists once in the word
+            const letterCount = word.split('').filter(l => l === letter).length;
+            if (letterCount === 1) {
+                return "rgb(211, 211, 211)"; // grey
+            }
             return "rgb(83, 141, 78)"; // green color
         }
 

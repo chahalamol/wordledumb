@@ -1,0 +1,14 @@
+{
+    "name": "wordledumb",
+    "version": "1.0.0",
+    "description": "Wordle for simple days",
+    "main": "index.js",
+    "scripts": {
+      "dev": "pnpm dev"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+    }
+  }
