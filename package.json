@@ -1,14 +1,15 @@
 {
-    "name": "wordledumb",
-    "version": "1.0.0",
-    "description": "Wordle for simple days",
-    "main": "index.js",
-    "scripts": {
-      "dev": "pnpm dev"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-    }
+  "name": "wordledumb",
+  "version": "1.0.0",
+  "description": "Wordle for simple days",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.0"
   }
+}
